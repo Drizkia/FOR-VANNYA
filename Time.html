@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'pixel';
+            src: local('☺'),  
+            url('Daddy\ Cartoon.ttf') format('truetype'), 
+            }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-size: cover;
+            font-family: 'pixel';
+            letter-spacing: 3px;
+        }
+
+        body {
+            background-image: url('background\ 3.jpg');
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            justify-content: space-between;
+            display: flex;
+            gap: 60px;
+        }
+
+        .countdown-container {
+            border: 5px solid black;
+        }
+
+        span.time {
+            color: #85c1f6;
+            -webkit-text-stroke: 0.1px #0088ff;
+            margin: 0;
+            font-size: 60px;
+            filter: drop-shadow(0 0 3px rgb(67, 64, 64));
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            color: #61b5ff;
+            -webkit-text-stroke: 0.1px #0088ff;
+            margin: 0;
+            filter: drop-shadow(0 0 3px rgb(67, 64, 64));
+        }
+
+        a.Back {
+            position: relative;
+            bottom: auto;
+            top: 170px;
+            left: auto;
+            right: 550px;
+        }
+
+        a.Back img {
+            width: 100px;
+            height: auto;
+        }
+
+        a.Back img {
+            width: 110px;
+            height: auto;
+            transition: all;
+            transition-duration: 500ms;
+            transition-timing-function: ease;
+        }
+
+        a.Back img:hover {
+            transform: scale(1.05);
+        }
+
+        a.Back img:active {
+            transform: scale(1.5);
+            filter: drop-shadow(0 0 15px rgb(24, 55, 255));
+        }
+    </style>
+</head>
+<body>
+    <div class="containeer">
+        <div class="h1">
+            <h1>06 September 2024 : 22.00 WIB</h1>
+        </div>
+        <div class="container">
+            <span class="time"><span id="days">00</span> Hari </span>
+            <span class="time"><span id="hours">00</span> Jam </span>
+            <span class="time"><span id="minutes">00</span> Menit</span>
+            <span class="time"><span id="seconds">00</span> Detik</span>
+        </div>
+    </div>
+
+    <a href="menu.html" class="Back"><img src="Back.png" alt="Kembali"></a>
+    
+    <script>
+// Tentukan tanggal mulai (6 September 2024)
+const startDate = new Date("September 6, 2024 10:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const timePassed = now - startDate; // Waktu yang sudah berlalu
+
+    // Hitung hari, jam, menit, dan detik
+    const days = Math.floor(timePassed / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timePassed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timePassed % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timePassed % (1000 * 60)) / 1000);
+
+    // Tampilkan hasil
+    document.getElementById("days").textContent = days.toString().padStart(2, "0");
+    document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+}
+
+// Jalankan countdown setiap detik
+setInterval(updateCountdown, 1000);
+
+// Panggil sekali saat halaman pertama kali dimuat
+updateCountdown();
+    </script>
+</body>
+</html>

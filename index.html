@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passcode Page</title>
+    <style>
+        @font-face {
+            font-family: 'pixel';
+            src: local('☺'),  
+            url('Daddy\ Cartoon.ttf') format('truetype'), 
+            }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-size: cover;
+            font-family: 'pixel';
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            color: #61b5ff;
+            -webkit-text-stroke: 0.1px #0088ff;
+        }
+
+        body {
+            background-image: url('background\ 3.jpg');
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* cursor: url('cursor.png'), auto; */
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .passcode-input {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .passcode-input input {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 24px;
+            border: 2px solid #62a2e2;
+            border-radius: 5px;
+            color: #61b5ff;
+            -webkit-text-stroke: 0.1px #0088ff;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            display: none;
+            -webkit-text-stroke: 0.1px #a20000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Masukkan PIN <br> tanggal Kitaa
+        </h2>
+        <div class="passcode-input">
+            <input type="text" maxlength="1" oninput="moveNext(this, 0)">
+            <input type="text" maxlength="1" oninput="moveNext(this, 1)">
+            <input type="text" maxlength="1" oninput="moveNext(this, 2)">
+            <input type="text" maxlength="1" oninput="moveNext(this, 3)">
+            <input type="text" maxlength="1" oninput="moveNext(this, 4)">
+            <input type="text" maxlength="1" oninput="checkPasscode()">
+        </div>
+        <p class="error" id="error-msg">KAMU LUPA YAAAA!!?</p>
+    </div>
+
+    <script>
+        const correctPIN = "060924"; // PIN yang benar
+
+        function moveNext(input, index) {
+            if (input.value.length === 1 && index < 5) {
+                document.querySelectorAll('.passcode-input input')[index + 1].focus();
+            }
+        }
+
+        function checkPasscode() {
+            const inputs = document.querySelectorAll('.passcode-input input');
+            let enteredPIN = "";
+            inputs.forEach(input => enteredPIN += input.value);
+
+            if (enteredPIN.length === 6) {
+                if (enteredPIN === correctPIN) {
+                    window.location.href = "open.html"; // Halaman tujuan jika PIN benar
+                } else {
+                    document.getElementById("error-msg").style.display = "block";
+                    setTimeout(() => {
+                        inputs.forEach(input => input.value = ""); // Reset input
+                        inputs[0].focus(); // Fokus kembali ke input pertama
+                        document.getElementById("error-msg").style.display = "none";
+                    }, 1500);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

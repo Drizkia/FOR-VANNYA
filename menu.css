@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'pixel';
+    src: local('☺'),  
+    url('Daddy\ Cartoon.ttf') format('truetype'), 
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    font-family: 'pixel';
+}
+
+body {
+    background-image: url('background\ 3.jpg');
+    /* cursor: url('cursor.png'), auto; */
+}
+
+section {
+    height: 100vh;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mnu h1 {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-bottom: 50px;
+    color: #61b5ff;
+    -webkit-text-stroke: 0.1px #0088ff;
+    filter: drop-shadow(0 0 3px rgb(67, 64, 64));
+    font-size: 50px;
+}
+
+ul.menuu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+li.menu {
+    list-style: none;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all;
+    transition-duration: 500ms;
+    background: hsla(208, 75%, 83%, 0.742);
+    border-radius: 50px;
+}
+
+.icon-text img {
+    width: 110px;
+    height: auto;
+    margin-bottom: 5px;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.icon-text p {
+    color: #61b5ff;
+    -webkit-text-stroke: 0.1px #0088ff;
+    margin: 0;
+    font-size: 20px;
+    filter: drop-shadow(0 0 3px rgb(67, 64, 64));
+}
+
+.icon-text:hover {
+    transform: scale(1.1);
+}
+
+.icon-text:active {
+    transform: scale(1.3);
+}

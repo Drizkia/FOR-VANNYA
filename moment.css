@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'pixel';
+    src: local('☺'),  
+    url('Daddy\ Cartoon.ttf') format('truetype'), 
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    font-family: 'pixel';
+}
+
+body {
+    background-image: url('background\ 3.jpg');
+    background-attachment: fixed;
+    /* cursor: url('cursor.png'), auto; */
+}
+
+section {
+    height: 100vh;
+}
+
+div.moment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin : 30px;
+    color: #61b5ff;
+    -webkit-text-stroke: 0.1px #0088ff;
+    filter: drop-shadow(0 0 3px rgb(67, 64, 64));
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+ul.moment {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 310PX);
+    grid-template-rows: repeat(3,400PX);
+}
+
+div.icon-text img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: auto;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0 0 15px rgb(67, 64, 84));
+    transition: all;
+    transition-duration: 1s;
+    filter: grayscale(1);
+    z-index: 0;
+}
+
+.icon-text:hover{
+    transform: scale(1.2);
+    filter: grayscale(0);
+    filter: drop-shadow(0 0 15px rgb(67, 64, 84));
+    z-index: 10;
+}
+
+.icon-text img {
+    width: 110px;
+    height: auto;
+    margin-bottom: 5px;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.icon-text p {
+    color: #61b5ff;
+    -webkit-text-stroke: 0.1px #0088ff;
+    margin: 0;
+    font-size: 20px;
+    filter: drop-shadow(0 0 3px rgb(67, 64, 64));
+    text-align: center;
+}
+
+span.a {
+    rotate: -20deg;
+}
+
+p.a {
+    rotate: -20deg;
+    position: relative;
+    bottom: 65px;
+    left: 45px;
+}
+
+span.b {
+    rotate: 10deg;
+    position: relative;
+    left: 20px;
+}
+
+p.b {
+    rotate: 10deg;
+    position: relative;
+    bottom: 60px;
+    left: 2px;
+}
+
+span.c {
+    rotate: 22deg;
+    position: relative;
+    left: 7px;
+}
+
+p.c {
+    rotate: 22deg;
+    position: relative;
+    bottom: 66px;
+    right: 42px;
+}
+
+span.d {
+    rotate: -8deg;
+    position: relative;
+    left: 20px;
+}
+
+p.d {
+    rotate: -8deg;
+    position: relative;
+    bottom: 57px;
+    left: 38px;
+}
+
+span.e {
+    rotate: 14deg;
+    position: relative;
+    left: 5px;
+}
+
+p.e {
+    rotate: 14deg;
+    position: relative;
+    bottom: 60px;
+    right: 24px;
+}
+
+span.f {
+    rotate: 4deg;
+    position: relative;
+    right: 10px;
+}
+
+p.f {
+    rotate: 4deg;
+    position: relative;
+    bottom: 58px;
+    right: 15px;
+    border: #61b5ff 1px transparent;
+    height: 45px;
+    width: 200px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+span.g {
+    rotate: -11deg;
+    position: relative;
+    right: 10px;
+}
+
+p.g {
+    rotate: -11deg;
+    position: relative;
+    bottom: 60px;
+    left: 13px;
+    border: #61b5ff 1px transparent;
+    height: 45px;
+    width: 200px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+span.h {
+    rotate: 24deg;
+    position: relative;
+    left: 5px;
+}
+
+p.h {
+    rotate: 24deg;
+    position: relative;
+    bottom: 65px;
+    right: 38px;
+}
+
+
+span.i {
+    rotate: -20deg;
+    position: relative;
+    right: 10px;
+}
+
+p.i {
+    rotate: -20deg;
+    position: relative;
+    bottom: 65px;
+    left: 30px;
+    border: #61b5ff 1px transparent;
+    height: 45px;
+    width: 200px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+span.j {
+    rotate: 30deg;
+    position: relative;
+    left: 20px;
+}
+
+p.j {
+    rotate: 30deg;
+    position: relative;
+    bottom: 71px;
+    right: 35px;
+    border: #61b5ff 1px transparent;
+    height: 45px;
+    width: 200px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+span.k {
+    rotate: -40deg;
+    position: relative;
+    right: 10px;
+}
+
+p.k {
+    rotate: -40deg;
+    position: relative;
+    bottom: 85px;
+    left: 63px;
+    border: #61b5ff 1px transparent;
+    height: 45px;
+    width: 200px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+span.l {
+    rotate: 12deg;
+    position: relative;
+    left: 10px;
+}
+
+p.l {
+    rotate: 12deg;
+    position: relative;
+    bottom: 60px;
+    right: 13px;
+    border: #61b5ff 1px transparent;
+}
+
+span.m {
+    rotate: 4deg;
+    position: relative;
+    right: auto;
+    left: 500px;
+}
+
+p.m {
+    rotate: 4deg;
+    position: relative;
+    bottom: 58px;
+    left: 490px;
+}
+
+a.Back {
+    position: relative;
+    bottom: 70px;
+    top: auto;
+    left: 70px;
+    right: auto;
+}
+
+a.Back img {
+    width: 100px;
+    height: auto;
+}
+
+a.Back img {
+    width: 120px;
+    height: auto;
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+a.Back img:hover {
+    transform: scale(1.05);
+}
+
+a.Back img:active {
+    transform: scale(1.5);
+    filter: drop-shadow(0 0 15px rgb(24, 55, 255));
+}

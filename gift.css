@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'pixel';
+    src: local('☺'),  
+    url('Daddy\ Cartoon.ttf') format('truetype'), 
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    font-family: 'pixel';
+}
+
+body {
+    background-image: url('background\ 3.jpg');
+    background-attachment: fixed;
+    /* cursor: url('cursor.png'), auto; */
+}
+
+section {
+    height: 100vh;
+}
+
+div.gift {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin : 30px;
+    color: #61b5ff;
+    -webkit-text-stroke: 0.1px #0088ff;
+    filter: drop-shadow(0 0 3px rgb(67, 64, 64));
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+ul.gift {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 400PX);
+    grid-template-rows: repeat(3,370PX);
+}
+
+div.icon-text img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: auto;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0 0 15px rgb(67, 64, 84));
+    transition: all;
+    transition-duration: 1s;
+    z-index: 0;
+}
+
+.icon-text:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px rgb(67, 64, 84));
+    z-index: 10;
+}
+
+.icon-text img {
+    width: 110px;
+    height: auto;
+    margin-bottom: 5px;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.icon-text p {
+    color: #61b5ff;
+    -webkit-text-stroke: 0.1px #0088ff;
+    margin: 0;
+    font-size: 20px;
+    filter: drop-shadow(0 0 3px rgb(67, 64, 64));
+    text-align: center;
+}
+
+
+/* back */
+a.Back {
+    position: relative;
+    bottom: 70px;
+    top: auto;
+    left: 70px;
+    right: auto;
+}
+
+a.Back img {
+    width: 100px;
+    height: auto;
+}
+
+a.Back img {
+    width: 120px;
+    height: auto;
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+a.Back img:hover {
+    transform: scale(1.05);
+}
+
+a.Back img:active {
+    transform: scale(1.5);
+    filter: drop-shadow(0 0 15px rgb(24, 55, 255));
+}
+
+span.g {
+    position: relative;
+    left: 400px;
+}
+
+span.g img {
+    height: 500px;
+}
