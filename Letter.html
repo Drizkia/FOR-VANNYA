@@ -5,162 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="paw.png">
-    <title>FOR YOU VANNYAA</title>
-
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-size: cover;
-        font-family: 'pixel';
-        letter-spacing: 3px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        :root{
-        --primary: #fff;
-        --bg-color: rgb(5, 53, 61);
-        --bg-envelope-color: #f5edd1;
-        --envelope-tab: #ecdeb8;
-        --envelope-cover: #e6cfa7;
-        --shadow-color: rgba(0, 0, 0, 0.2);
-        --txt-color: #444;
-        --heart-color: rgb(252, 8, 231);
+        .text p {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeIn 0.5s ease-in-out forwards;
         }
 
-        body{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url('background\ 3.jpg');
-        background-attachment: fixed;
+        h4 {
+            color: blueviolet;
         }
 
-        .container {
-        height: 100vh;
-        display: grid;
-        place-items: center;
-        }
-
-        .container > .envelope-wrapper {
-        background: var(--bg-envelope-color);
-        box-shadow: 0 0 40px var(--shadow-color);
-        }
-
-        .envelope-wrapper > .envelope {
-        position: relative;
-        width: 300px;
-        height: 230px;
-        }
-
-        .envelope-wrapper > .envelope::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        z-index: 2;
-        border-top: 130px solid var(--envelope-tab);
-        border-right: 150px solid transparent;
-        border-left: 150px solid transparent;
-        transform-origin: top;
-        transition: all 0.5s ease-in-out 0.7s;
-        }
-
-        .envelope-wrapper > .envelope::after {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        width: 0px;
-        height: 0px;
-        border-top: 130px solid transparent;
-        border-right: 150px solid var(--envelope-cover);
-        border-bottom: 100px solid var(--envelope-cover);
-        border-left: 150px solid var(--envelope-cover);
-        }
-
-        .envelope > .letter {
-        position: absolute;
-        right: 20%;
-        bottom: 0;
-        width: 54%;
-        height: 80%;
-        background: var(--primary);
-        text-align: center;
-        transition: all 1s ease-in-out;
-        box-shadow: 0 0 5px var(--shadow-color);
-        padding: 20px 10px;
-        }
-
-        .envelope > .letter > .text {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: var(--txt-color);
-        text-align: left;
-        font-size: 10px;
-        }
-
-        .heart {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 15px;
-        height: 15px;
-        background: var(--heart-color);
-        z-index: 4;
-        transform: translate(-50%, -20%) rotate(45deg);
-        transition: transform 0.5s ease-in-out 1s;
-        box-shadow: 0 1px 6px var(--shadow-color);
-        cursor: pointer;
-        }
-
-        .heart:before, 
-        .heart:after {
-        content: "";
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        background-color: var(--heart-color);
-        border-radius: 50%;
-        }
-
-        .heart:before {
-        top: -7.5px;
-        }
-
-        .heart:after {
-        right: 7.5px;
-        }
-
-        .flap > .envelope:before {
-        transform: rotateX(180deg);
-        z-index: 0;
-        }
-
-        .flap > .envelope > .letter {
-        bottom: 100px;
-        transform: scale(1.5);
-        transition-delay: 1s;
-        }
-
-        .flap > .heart {
-        transform: rotate(90deg);
-        transition-delay: 0.4s;
-        }
-
+        .text p:nth-child(1) { animation-delay: 0.5s; }
+        .text p:nth-child(2) { animation-delay: 1s; }
+        .text p:nth-child(3) { animation-delay: 1.5s; }
+        .text p:nth-child(4) { animation-delay: 2s; }
+        .text p:nth-child(5) { animation-delay: 2.5s; }
+        .text p:nth-child(6) { animation-delay: 3s; }
+        .text p:nth-child(7) { animation-delay: 3.5s; }
+        .text p:nth-child(8) { animation-delay: 4s; }
+        .text p:nth-child(9) { animation-delay: 4.5s; }
+        .text p:nth-child(10) { animation-delay: 5s; }
+        .text p:nth-child(11) { animation-delay: 5.5s; }
+        .text p:nth-child(12) { animation-delay: 6s; }
+        .text p:nth-child(13) { animation-delay: 6.5s; }
+        .text p:nth-child(14) { animation-delay: 7s; }
+        .text p:nth-child(15) { animation-delay: 7.5s; }
+        .text p:nth-child(16) { animation-delay: 8s; }
+        .text p:nth-child(17) { animation-delay: 8.5s; }
+        .text p:nth-child(18) { animation-delay: 9s; }
+        .text p:nth-child(19) { animation-delay: 9.5s; }
+        .text p:nth-child(20) { animation-delay: 10s; }
+        .text p:nth-child(21) { animation-delay: 10.5s; }
+        .text p:nth-child(22) { animation-delay: 11s; }
+        .text p:nth-child(23) { animation-delay: 11.5s; }
+        .text p:nth-child(24) { animation-delay: 12s; }
+        .text p:nth-child(25) { animation-delay: 12.5s; }
+        .text p:nth-child(26) { animation-delay: 13s; }
+        .text p:nth-child(27) { animation-delay: 13.5s; }
+        .text p:nth-child(28) { animation-delay: 14s; }
+        .text p:nth-child(29) { animation-delay: 14.5s; }
+        .text p:nth-child(30) { animation-delay: 15s; }
+        .text p:nth-child(31) { animation-delay: 15.5s; }
+        .text p:nth-child(32) { animation-delay: 16s; }
+        .text p:nth-child(33) { animation-delay: 16.5s; }
+        .text p:nth-child(34) { animation-delay: 17s; }
+        .text p:nth-child(35) { animation-delay: 17.5s; }
+        .text p:nth-child(36) { animation-delay: 18s; }
+        .text p:nth-child(37) { animation-delay: 18.5s; }
+        .text p:nth-child(38) { animation-delay: 19s; }
+        .text p:nth-child(39) { animation-delay: 19.5s; }
+        .text p:nth-child(40) { animation-delay: 20s; }
+        .text p:nth-child(41) { animation-delay: 20.5s; }
+        .text p:nth-child(42) { animation-delay: 21s; }
+        .text p:nth-child(43) { animation-delay: 21.5s; }
+        .text p:nth-child(44) { animation-delay: 22s; }
+        .text p:nth-child(45) { animation-delay: 22.5s; }
+        .text p:nth-child(46) { animation-delay: 23s; }
+        .text p:nth-child(47) { animation-delay: 23.5s; }
+        .text p:nth-child(48) { animation-delay: 24s; }
+        .text p:nth-child(49) { animation-delay: 24.5s; }
+        .text p:nth-child(50) { animation-delay: 25s; }
+        .text p:nth-child(51) { animation-delay: 25.5s; }
+        .text p:nth-child(52) { animation-delay: 26s; }
+        .text p:nth-child(53) { animation-delay: 26.5s; }
+        .text p:nth-child(54) { animation-delay: 27s; }
+        .text p:nth-child(55) { animation-delay: 27.5s; }
+        .text p:nth-child(56) { animation-delay: 28s; }
+        .text p:nth-child(57) { animation-delay: 28.5s; }
+        .text p:nth-child(58) { animation-delay: 29s; }
+        .text p:nth-child(59) { animation-delay: 29.5s; }
+        .text p:nth-child(60) { animation-delay: 30s; }
+        .text p:nth-child(61) { animation-delay: 30.5s; }
+        .text p:nth-child(62) { animation-delay: 31s; }
+        .text p:nth-child(63) { animation-delay: 31.5s; }
+        .text p:nth-child(64) { animation-delay: 32s; }
+        .text p:nth-child(65) { animation-delay: 32.5s; }
+    
         a.Back {
             position: relative;
             bottom: auto;
-            top: 290px;
+            top: 300px;
             left: auto;
-            right: 650px;
+            right: 660px;
         }
-    
+
         a.Back img {
             width: 100px;
             height: auto;
         }
-    
+
         a.Back img {
             width: 110px;
             height: auto;
@@ -168,68 +116,15 @@
             transition-duration: 500ms;
             transition-timing-function: ease;
         }
-    
+
         a.Back img:hover {
             transform: scale(1.05);
         }
-    
+
         a.Back img:active {
             transform: scale(1.5);
             filter: drop-shadow(0 0 15px rgb(24, 55, 255));
         }
-
-/* Efek blur hanya muncul setelah surat terbuka */
-body.letter-active::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 5;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* Efek surat membesar ke tengah */
-.letter {
-    position: absolute;
-    right: 20%;
-    bottom: 0;
-    width: 54%;
-    height: 80%;
-    background: red;
-    text-align: center;
-    transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    padding: 20px 10px;
-    transform: scale(0.8);
-    opacity: 0;
-}
-
-/* Surat membesar setelah amplop selesai terbuka */
-.letter-open {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%; /* Ukuran lebih besar */
-    height: auto;
-    /* max-width: 600px; Lebih besar */
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.8); /* Perbesar */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-    transition: transform 2s ease-in-out, opacity 0.8s ease-in-out;
-}
-
-/* Efek blur baru aktif setelah amplop terbuka */
-body.letter-active::before {
-    opacity: 1;
-}
-
     </style>
 </head>
 <body>
@@ -238,54 +133,106 @@ body.letter-active::before {
             <div class="envelope">
                 <div class="letter">
                     <div class="text">
-                        <strong>Hi Hallo Sayangkuu</strong>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Numquam labore omnis minus maiores laboriosam, facere in beatae esse. 
-                        </p>
+                        <h4><strong>Hi Hallo Sayangkuu</strong></h4> <br>
+                            <p>Aduhaiii sayangkuu udah sampe ke Letter hdahdhahdhdshdhasdhaw</p>
+                            <p>btw ini aku buat khusus buat kamu, semoga kamu suka ya</p>
+                            <p>aku tau kamu pasti suka kok, soalnya aku buatnya dengan hati</p>
+                            <p>semoga kamu suka ya sayangkuu</p>
+
+                            <p>Selamat Ulang Tahun Sayangkuuu, ciee udah nambah berapa yaa umurnya WKWKWKWKWKWK</p> <br>
+                            <p>AKU BINGUNG HARUS NGOMONG APAAA</p> <br>
+                            <p>ok, let me cook HEHEHEHE</p> <br>
+
+                            <p>Gimana sayangg hari inii?? gimana hari special kamu iniii??</p> <br>
+                            <p>Pasti seru bing bing yahh xixixixi</p> <br>
+                            <p>ayang sudah bertambah usia, ayang semakin tua ih HAHAHAHAHA</p> <br>
+                            <p>semoga ayang selalu bisa mewujudkan apa yang ayang pegen</p><br>
+                            <p>apa yang ayang idam idamkan, apa yang ayang harapkan</p> <br>
+                            <p>dan masih banyak lagi, semoga terwujud yahh</p><br>
+
+                            <p>semoga, hal hal yang vannya selalu takutkan tada pernah terjadi</p> <br>
+                            <p>semoga yang terjadi hal hal baik sahajaa</p> <br>
+
+                            <p>vannya terus terus berkembang dan berproses</p> <br>
+                            <p>dimdim selalu senang dengar cerita apapun tentang vannya</p> <br>
+                            <p>dimdim harap, vannya terus bersama dimdim yahh</p> <br>
+                            <p>terus terus becerita terus terus ada di sisi dimdim</p> <br>
+                            <p>vannya ada buat dimdim, dimdim pun ada buat vannya xixixixi</p> <br>
+
+                            <p>Vannya nono buat nahan nahan yaa, no no pendam sendiri</p> <br>
+                            <p>Vannya punya dimas, vannya tada sendiri</p> <br>
+                            <p>come to me, dimdim usahakan ada buat vannya</p> <br>
+                            <p>ada buat jadi rumah untuk vannya tentu sahajaa</p> <br>
+                            <p>vannya jangan sungkan sungkan buat masuk rumah sendiri yahh</p> <br>
+
+                            <p>Vannya juga nono yaa selalu memaksakan apapunn</p> <br>
+                            <p>apa yang bisa dicoba, lets we try</p> <br>
+                            <p>dicoba sebagai langkah awal, kalau gagal ya sudah</p> <br>
+                            <p>tapi ya kita selalu berharap semoga berhasill</p> <br>
+                            <p>tada baik sayang memaksakan diri, not gud buat diri ayang</p> <br>
+
+                            <p>Maaf yaa dimdim cuma bisa kasih hal hal kecill</p> <br>
+                            <p>tada seperti vannya yang sungguh sungguh effort</p> <br>
+                            <p>dimdim cuma bisa kasih ini ini ini buat ayangg</p> <br>
+                            <p>dimas harap ayang suka dengan hadiahnya</p> <br>
+                            <p>dipake yaa hadiahnyaa, supaya ayang tada kedinginannnn</p> <br>
+                            <p>shhhhhh</p> <br>
+
+                            <p>dimdim suka sedih kalau vannya tada baik baik aja</p> <br>
+                            <p>dimdim harap vannya selalu baik baik aja</p> <br>
+                            <p>tada cuma vannya</p> <br>
+                            <p>semua disekitar vannya yang bikin vannya happy</p> <br>
+                            <p>semoga semua selalu bagus buat ayang</p> <br>
+
+                            <p>dimdim so very very say thank you buat ayang</p> <br>
+                            <p>karna ayang sudah mau bertahan sama dimdim</p> <br>
+                            <p>ayang sudah selalu baik ke dimdim</p> <br>
+                            <p>ayang selalu lovely lovely</p> <br>
+                            <p>ayang selalu perhatian</p> <br>
+                            <p>ayang selalu haluss</p> <br>
+                            <p>ayang selalu excited</p> <br>
+                            <p>POKOKNYA AYANG SMUANYA DEHHH</p> <br>
+                            <p>dimdim sungguh bersyukur bisa bersama vannya</p><br>
+                            <p>sungguh sungguh bersyukur & senang</p> <br>
+                            <p>im happy with you in this universe</p> <br>
+
+                            <p>aduhh dimdim bingung bing bing mau ngomong apa lagi</p> <br>
+                            <p>pokoknya dimdim punya banyak banyak banyakkkkkkkk</p> <br>
+                            <p>harapan buat ayang, semoga semua semua harapan ayang terwujudd</p> <br>
+                            <p>tada ada satupun terlewat, semoga semuwa terwujuddd</p> <br>
+                            <p>buat ayangg</p> <br>
+
+                            <p>Love You Sayangku Cintakuu</p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                     </div>
                 </div>
             </div>
             <div class="heart"></div>
         </div>
     </div>
-
     <a href="menu.html" class="Back"><img src="Back.png" alt="Kembali"></a>
 
     <script>
-        const envelope = document.querySelector('.envelope-wrapper');
-        const letter = document.querySelector('.letter');
-        const body = document.body;
-        let isOpen = false;
-        
-        // Event saat amplop diklik
-        envelope.addEventListener('click', () => {
-            if (!isOpen) {
-                envelope.classList.add('flap');
-                setTimeout(() => {
-                    body.classList.add('letter-active');
-                    letter.classList.add('letter-open');
-                    isOpen = true;
-                }, 2000); // Sesuaikan dengan durasi animasi amplop
-            }
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+    const textContainer = document.querySelector('.text');
+    const paragraphs = textContainer.querySelectorAll('p');
 
-        // Event ketika surat diklik agar membesar
-        letter.addEventListener('click', (event) => {
-            event.stopPropagation(); // Mencegah event bubbling ke body
-            letter.classList.add('letter-open');
+    paragraphs.forEach((paragraph, index) => {
+        // Tambahkan event listener untuk setiap paragraf
+        paragraph.addEventListener('animationstart', () => {
+            // Scroll ke bawah setiap kali paragraf muncul
+            textContainer.scrollTop = textContainer.scrollHeight;
         });
-        
-        // Event untuk menutup surat jika klik di luar
-        document.addEventListener('click', (event) => {
-            if (isOpen && !letter.contains(event.target) && !envelope.contains(event.target)) {
-                body.classList.remove('letter-active');
-                letter.classList.remove('letter-open'); // Surat mengecil kembali
-                envelope.classList.remove('flap'); // Tutup amplop
-                isOpen = false;
-            }
+    });
         });
-        </script>
-        
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
 </body>
 </html>
